@@ -48,6 +48,10 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
   print_lex("SCICONST");
 }
 
+^\{DIGIT}{3}[.]\{DIGIT}{3}[.]\{DIGIT}{4}$   {
+  print_lex("PH")
+}
+
 {HEX}+[H]                 { // check for hexidecimal
   print_lex("HEXCONST");
 }
