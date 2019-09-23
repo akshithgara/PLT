@@ -91,7 +91,7 @@ PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
 
 [\^]                      { // new line character add 1 to num_lines_process
   print_lex("?     ");
-  total_lines++;
+  //total_lines++;
 }
 
 .                         { // default rule
