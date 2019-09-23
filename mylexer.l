@@ -19,7 +19,7 @@ ALPHA       [a-zA-Z]
 ALPHANUM    [a-zA-z0-9]
 HEX         [0-9ABCDEF]
 BIN         [0|1]
-OPERATOR    [+|-|*|/|<|>|=]
+OPERATOR    [\+\-\*/<>=]
 SUFFIX      [\.com|\.net|\.edu]
 KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
 
