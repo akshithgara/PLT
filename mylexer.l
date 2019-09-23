@@ -30,7 +30,7 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
 [ \t]                     {; // skipping white space
 }
 
-[\n]                      { total_lines++; // incrementing total_lines
+\n                      { total_lines++; // incrementing total_lines
 }
 
 %(.)*                     {; // skip comment
@@ -91,7 +91,7 @@ PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
 
 [\^]                      { // new line character add 1 to num_lines_process
   print_lex("?     ");
-  //total_lines++;
+
 }
 
 .                         { // default rule
