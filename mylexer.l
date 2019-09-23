@@ -60,7 +60,7 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
   print_lex("OPERATOR");
 }
 
-{KEYWORD} { // check for keyword
+PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
   print_lex("KEYWORD");
 }
 
