@@ -21,7 +21,7 @@ HEX         [0-9ABCDEF]
 BIN         [0|1]
 OPERATOR    [+|*|/|<|>|&|-]
 SUFFIX      [\.com|\.net|\.edu]
-KEYWORD     [while|if|then|else|end|bannana]
+KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
 
 /*****     REG EX     *****/
 %%
@@ -60,7 +60,7 @@ KEYWORD     [while|if|then|else|end|bannana]
   print_lex("OPERATOR");
 }
 
-while|if|then|else|banana { // check for keyword
+PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
   print_lex("KEYWORD");
 }
 
