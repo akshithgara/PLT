@@ -49,15 +49,15 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
 }
 
 \({DIGIT}{3}\){DIGIT}{3}\-{DIGIT}{4} {
-  print_lex("PHCONST")
+  print_lex("PHCONST");
 }
 
 {DIGIT}{3}\-{DIGIT}{3}\-{DIGIT}{4} {
-  print_lex("PHCONST")
+  print_lex("PHCONST");
 }
 
 {DIGIT}{3}\.{DIGIT}{3}\.{DIGIT}{4} {
-  print_lex("PHCONST")
+  print_lex("PHCONST");
 }
 
 {HEX}+[H]                 { // check for hexidecimal
