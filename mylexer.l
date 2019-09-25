@@ -33,7 +33,7 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
 \n                      { total_lines++; // incrementing total_lines
 }
 
-%(.)*                     {; // skip comment
+%(.)*                     {; // skipping comments
 }
 
 [+-]?{DIGIT}+             { // check for integer
@@ -44,7 +44,7 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
   print_lex("DECCONST");
 }
 
-[+-]?{DIGIT}+[.]{DIGIT}+[E][+|-]?{DIGIT}+  { // check for scientific number
+[+-]?{DIGIT}+[.]{DIGIT}+[E][+|-]?{DIGIT}+  { // checking for scientific numbers
   print_lex("SCICONST");
 }
 
@@ -60,27 +60,27 @@ KEYWORD     [PRINT|IF|PROC|THEN|ELSE|WHILE|END]
   print_lex("PHCONST");
 }
 
-{HEX}+[H]                 { // check for hexidecimal
+{HEX}+[H]                 { // checking for hexidecimals
   print_lex("HEXCONST");
 }
 
-{BIN}+[B]                 { // check for binary number
+{BIN}+[B]                 { // checking for binary numbers
   print_lex("BINCONST");
 }
 
-{OPERATOR}                { // check for OPERATOR
+{OPERATOR}                { // checking for OPERATOR(s)
   print_lex("OPERATOR");
 }
 
-PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
+PRINT|IF|PROC|THEN|ELSE|WHILE|END { // checking for keywords
   print_lex("KEYWORD");
 }
 
-{ALPHA}+{ALPHANUM}*       { // check for identifier
+{ALPHA}+{ALPHANUM}*       { // checking for identifiers
   print_lex("IDENT");
 }
 
-\".*\"                    { // check for string literal
+\".*\"                    { // checking for string literals
   print_lex("STRCONST");
 }
 
@@ -99,7 +99,7 @@ PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
 
 void print_lex(string s){
   cout << "#" << process_num <<": TOKEN: "<< s <<"\tLEXEME: "<< yytext << endl;
-  process_num ++; // increment process number
+  process_num ++; // increment 
 }
 
 main(){
