@@ -76,11 +76,6 @@ PRINT|IF|PROC|THEN|ELSE|WHILE|END { // check for keyword
   print_lex("KEYWORD");
 }
 
-({ALPHA}+{ALPHANUM}*([\.]{ALPHA}+{ALPHANUM}*)*[@]{ALPHA}+{ALPHANUM}*((\.{ALPHA}+({ALPHANUM}*))*(([\.com]|[\.net]|[\.edu])+))) {
- // check for email
-  print_lex("EMCONST");
-}
-
 {ALPHA}+{ALPHANUM}*       { // check for identifier
   print_lex("IDENT");
 }
