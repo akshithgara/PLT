@@ -48,8 +48,8 @@
 	)
 )
 
-(defun myGen (X Y Z)
-	(cond ((< X Y) (cons X (myGen (+ X Z) Y Z)))
+(defun myGen (X Y)
+	(cond ((< X Y) (cons X (myGen (1+ X) Y)))
 		((= X Y) (list X))
 		((> X Y) nil)
 	)
